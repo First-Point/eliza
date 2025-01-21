@@ -16,6 +16,9 @@
         },
         {
             "path": "packages/client-slack"
+        },
+        {
+            "path": "packages/plugin-firstpoint-crypto"
         }
     ]
 }

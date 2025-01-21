@@ -1,0 +1,45 @@
+{
+    "name": "@elizaos/plugin-firstpoint-crypto",
+    "version": "0.1.0",
+    "description": "A cryptocurrency price tracking plugin for ElizaOS",
+    "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": ["dist"],
+    "scripts": {
+        "build": "tsup src/index.ts --format esm --no-dts && tsc --emitDeclarationOnly",
+        "dev": "tsup src/index.ts --format esm --dts --watch",
+        "test": "vitest run",
+        "test:watch": "vitest"
+    },
+    "dependencies": {
+        "@elizaos/core": "workspace:*"
+    },
+    "devDependencies": {
+        "tsup": "^8.0.0",
+        "typescript": "^5.0.0",
+        "vitest": "^1.0.0"
+    },
+    "keywords": [
+        "elizaos",
+        "plugin",
+        "cryptocurrency",
+        "crypto",
+        "price",
+        "bitcoin",
+        "ethereum"
+    ],
+    "author": "First Point",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/First-Point/plugin-firstpoint-crypto.git"
+    },
+    "bugs": {
+        "url": "https://github.com/First-Point/plugin-firstpoint-crypto/issues"
+    },
+    "homepage": "https://github.com/First-Point/plugin-firstpoint-crypto#readme",
+    "publishConfig": {
+        "access": "public"
+    }
+}

@@ -74,7 +74,7 @@ if [ ! -d "$PACKAGES_DIR" ]; then
 fi
 
 # List of working folders to watch (relative to $PACKAGES_DIR)
-WORKING_FOLDERS=("client-direct") # Core is handled separately
+WORKING_FOLDERS=("client-direct" "plugin-firstpoint-crypto")
 
 # Initialize an array to hold package-specific commands
 COMMANDS=()
