@@ -34,6 +34,9 @@ importers:
       '@deepgram/sdk':
         specifier: ^3.9.0
         version: 3.10.1(bufferutil@4.0.9)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      '@elizaos-plugins/adapter-sqlite':
+        specifier: workspace:*
+        version: link:packages/adapter-sqlite
       '@injectivelabs/sdk-ts':
         specifier: ^1.14.33
         version: 1.14.40(@types/react@19.0.8)(bufferutil@4.0.9)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(utf-8-validate@5.0.10)
@@ -64,6 +67,9 @@ importers:
       sharp:
         specifier: 0.33.5
         version: 0.33.5
+      ws:
+        specifier: 8.18.0
+        version: 8.18.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       zod:
         specifier: 3.24.1
         version: 3.24.1
