@@ -328,7 +328,7 @@ export class DirectClient {
                 );
 
                 await runtime.evaluate(memory, state);
-
+                content.config = req.body;
                 // Check if we should suppress the initial message
                 const action = runtime.actions.find(
                     (a) => a.name === response.action

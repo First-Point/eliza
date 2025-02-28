@@ -18,8 +18,8 @@ import {
     stringToUuid,
     validateCharacterConfig,
 } from "@elizaos/core";
-import { defaultCharacter } from "./defaultCharacter.ts";
-
+import { cosmoCelestiaCharacter } from "./cosmoCelestia.ts";
+import { cosmoPlayCharacter } from "./cosmoPlay.ts";
 import { bootstrapPlugin } from "@elizaos/plugin-bootstrap";
 
 import fs from "fs";
@@ -351,7 +351,7 @@ export async function loadCharacters(
 
     if (loadedCharacters.length === 0) {
         elizaLogger.info("No characters found, using default character");
-        loadedCharacters.push(defaultCharacter);
+        loadedCharacters.push(cosmoCelestiaCharacter);
     }
 
     return loadedCharacters;
@@ -773,13 +773,7 @@ const hasValidRemoteUrls = () =>
 const startAgents = async () => {
     const directClient = new DirectClient();
     let serverPort = Number.parseInt(settings.SERVER_PORT || "3000");
-    const args = parseArguments();
-    const charactersArg = args.characters || args.character;
-    let characters = [defaultCharacter];
-
-    if ((charactersArg) || hasValidRemoteUrls()) {
-        characters = await loadCharacters(charactersArg);
-    }
+    let characters = [cosmoCelestiaCharacter, cosmoPlayCharacter];
 
     try {
         for (const character of characters) {

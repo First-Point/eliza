@@ -371,7 +371,7 @@ export async function generateText({
 
     elizaLogger.info("Generating text with options:", {
         modelProvider: runtime.modelProvider,
-        model: modelClass,
+        model: ModelClass.LARGE,
         // verifiableInference,
     });
     elizaLogger.log("Using provider:", runtime.modelProvider);
