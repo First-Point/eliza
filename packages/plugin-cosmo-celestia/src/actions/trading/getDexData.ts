@@ -11,7 +11,7 @@ import { validateCosmoConfig } from "../../environment";
 
 export default {
     name: "GET_DEX_DATA",
-    similes: ["FETCH_DEX_DATA", "SHOW_DEX_INFO", "GET_EXCHANGE_DATA", "GET_DEX_INFO"],
+    similes: ["SHOW_DEX_INFO", "GET_EXCHANGE_DATA", "GET_DEX_INFO"],
     description: "Get DEX data including reserves and token addresses",
     validate: async (runtime: IAgentRuntime) => {
         try {
